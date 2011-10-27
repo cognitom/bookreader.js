@@ -1,0 +1,22 @@
+#br_sampler { position:absolute; visibility: hidden; }
+#br_sampler h1 { display: inline }
+#br_sampler h2 { display: inline }
+#br_sampler h3 { display: inline }
+#br_sampler p { display: inline }
+
+#br_error {
+	position:fixed;
+	top:5px; right:5px;
+	width:200px;
+	height:200px;
+	padding:5px;
+	border:1px solid #ff0000;
+	background-color: #ffefef;
+	opacity:0.8;
+	overflow: scroll;
+}
+#br_error p {
+	font-size:10px; line-height: 1.2em;
+	margin:0;
+	padding:0;
+}

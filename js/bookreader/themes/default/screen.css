@@ -1,0 +1,218 @@
+body {
+	margin:0; padding:0;
+	background-color: #FFFFFF; color:#332200;
+	overflow: hidden;
+}
+
+#bookreader { display:none; }
+#br_body {
+	margin: 0 30px;
+}
+#br_body div.page {
+	width:400px;
+	border-right:1px dotted #CCCCCC;
+	float: left;
+}
+#br_body div.box {
+	margin-top:20px;
+	margin-bottom:20px;
+	margin-left:30px;
+}
+#br_body div.folio {
+	width:400px;/* equal to width of #br_body div.page */
+	position: absolute;
+	bottom:10px;
+	text-align: center;
+	font-size:10px;
+}
+#br_body p.right { text-align: right; margin-right:30px; }
+#br_body p.center { text-align: center; margin-right:30px; }
+
+#br_body h1 {
+	font-family: "Hiragino Mincho Pro","ヒラギノ明朝 Pro W3","Meiryo","メイリオ","ＭＳ ゴシック",monospace;
+	margin:0; padding:0; width:auto; overflow:hidden; text-align:left;
+	font-size:24px; height:66px; line-height: 66px;
+	letter-spacing:-0.05em;
+}
+#br_body h2 {
+	font-family: "Hiragino Mincho Pro","ヒラギノ明朝 Pro W3","Meiryo","メイリオ","ＭＳ ゴシック",monospace;
+	margin:0; padding:0; width:auto; overflow:hidden; text-align:left;
+	font-size:18px; height:44px; line-height: 44px;
+	letter-spacing:-0.05em;
+}
+#br_body h3 {
+	font-family: "Hiragino Mincho Pro","ヒラギノ明朝 Pro W3","Meiryo","メイリオ","ＭＳ ゴシック",monospace;
+	margin:0; padding:0; width:auto; overflow:hidden; text-align:left;
+	font-size:14px; height:22px; line-height: 22px;
+}
+#br_body p {
+	font-family: "Hiragino Mincho Pro","ヒラギノ明朝 Pro W3","Meiryo","メイリオ","ＭＳ ゴシック",monospace;
+	margin:0; padding:0; width:auto; overflow:hidden;
+	font-size:12px; height:22px; line-height: 22px;
+}
+#br_body strong {
+	font-family: "Hiragino Mincho Pro","ヒラギノ明朝 Pro W3","Meiryo","メイリオ","ＭＳ ゴシック",monospace;
+}
+#br_body p.caption {
+	font-family: "Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3","Meiryo","メイリオ","ＭＳ ゴシック",monospace;
+	font-size:12px; height:22px; line-height: 22px;
+}
+#br_body img {
+	margin-left: 0;
+}
+
+
+/* navi */
+#br_navigation {}
+a#br_nav_prev,
+a#br_nav_next {
+	position: fixed; top:45%;
+	width:19px; height:52px;
+	line-height: 28px; vertical-align: middle;
+	text-decoration: none; text-align:center; font-size:14px;
+	background-repeat: no-repeat;
+	filter:alpha(opacity=0); -moz-opacity:0.00; opacity:0.00;
+}
+a#br_nav_prev { left:2px; background-image: url(images/prev.gif); }
+a#br_nav_next { left:379px; background-image: url(images/next.gif); }
+
+/* toolbar */
+#br_toolbar {
+	position:fixed;
+	bottom:0; right:255px; left:5px;
+	width:auto;
+	height:52px;
+	padding:0;
+	border:1px solid #999999;
+	border-bottom: none;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius: 5px 5px 0 0;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background-color: #cccccc;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-position:bottom;
+	filter:alpha(opacity=0); -moz-opacity:0.00; opacity:0.00;
+}
+#br_toolbar_group1 {
+	float:left;
+	margin:0; padding:2px 8px 0 8px;
+	border-right:1px solid #999999;
+}
+#br_toolbar_group2 {
+	float:right;
+	margin:0; padding:2px 8px 0 8px;
+	border-left:1px solid #999999;
+}
+a#br_toolbar_home,
+a#br_toolbar_prev,
+a#br_toolbar_next,
+a#br_toolbar_end,
+a#br_toolbar_print,
+a#br_toolbar_sidebar,
+a#br_toolbar_escape {
+	display:block;
+	margin:0; padding:0;
+	width:38px; height:38px;
+	line-height: 38px; vertical-align: middle;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	float: left;
+}
+a#br_toolbar_home:hover,
+a#br_toolbar_prev:hover,
+a#br_toolbar_next:hover,
+a#br_toolbar_end:hover,
+a#br_toolbar_print:hover,
+a#br_toolbar_sidebar:hover,
+a#br_toolbar_escape:hover { background-position:0 -38px; }
+a#br_toolbar_home { background-image: url(images/toolbar-home.png); }
+a#br_toolbar_prev { background-image: url(images/toolbar-prev.png); }
+a#br_toolbar_next { background-image: url(images/toolbar-next.png); }
+a#br_toolbar_end { background-image: url(images/toolbar-end.png); }
+a#br_toolbar_print { background-image: url(images/toolbar-print.png); }
+a#br_toolbar_sidebar { background-image: url(images/toolbar-sidebar.png); }
+a#br_toolbar_escape { background-image: url(images/toolbar-escape.png); }
+div#br_toolbar_tooltip1,
+div#br_toolbar_tooltip2 {
+	clear: both;
+	font-size:9px; text-align: center;
+	font-family: "Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3","Meiryo","メイリオ","ＭＳ ゴシック",monospace;
+}
+div#br_toolbar_pager { text-align:center; margin:0 146px 0 185px; }
+div#br_toolbar_pager table {
+	width:100%; border-collapse:collapse;
+	border-top:1px solid #999999;
+	border-right:1px solid #999999;
+	border-left:1px solid #999999;
+}
+div#br_toolbar_pager td { padding:0; border:none; width:1%; }
+div#br_toolbar_pager td.odd { background-color:#FFFFFF; }
+div#br_toolbar_pager td.even { background-color:#E7ECF1; }
+div#br_toolbar_pagerballoon {
+	margin:0; padding:0;
+	position: fixed; bottom: 10px; line-height:24px;
+	width:36px; height:36px;
+	background-image: url(images/toolbar-pagerballoon.png);
+	background-repeat: no-repeat;
+	font-family: "Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3","Meiryo","メイリオ","ＭＳ ゴシック",monospace;
+	font-size: 10px;
+	color:#FFFFFF;
+}
+div#br_toolbar_copyright {
+	margin:0; padding:0; overflow:hidden;
+	line-height: 33px; height:33px; vertical-align:middle;
+	text-align: center;
+	color:#999999;
+	font-size: 11px;
+	font-family: "Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3","Meiryo","メイリオ","ＭＳ ゴシック",monospace;
+}
+
+/* sidebar */
+#br_sidebar {
+	position:fixed;
+	bottom:5px; right:5px; top:5px;
+	width:245px;
+	height:auto;
+	padding:0;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background-color:#333333;/* #E8E5D7;*/
+	overflow: hidden;
+	filter:alpha(opacity=0); -moz-opacity:0.00; opacity:0.00;
+	color:#ffffff;
+	font-family: "Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3","Meiryo","メイリオ","ＭＳ ゴシック",monospace;
+	line-height:1.4em;
+	z-index: 100;
+}
+a#br_sidebar_close {
+	text-decoration: none;
+	position: fixed;
+	top:10px; right:10px;
+	width:24px; height:24px;
+	background-repeat: no-repeat;
+	background-image: url(images/sidebar-close.png);
+}
+
+
+
+#sidebar { margin:15px; }
+#sidebar h3 {
+	margin:15px 0 5px; padding:0;
+	font-size:14px;
+}
+#sidebar p {
+	margin:5px 0; padding:0;
+	font-size:12px;
+}
+#sidebar ul {
+	margin:5px 0 5px 20px; padding:0;
+	font-size:12px;
+}
+#sidebar ul li {
+	
+}
+#sidebar a { color:#ffffff; }
